@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+	background-image: url("bg.png");
+	background-size:auto;
+	font-family: Arial, Halvetica, sans-serif;}
+	form {border: px solid #f1f1f1;}
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0px solid #ccc;
+    box-sizing: border-box;
+	font-size:1vw;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+	font-size:1vw;
+}
+
+label.valid{
+
+width:16px;
+height:16px;
+background: url('https://alittlecode.com/files/jQuery-Validate-Demo/assets/img/valid.png') center no-repeat;
+display:inline-block;
+text-indent:-9999px;
+font-size:1vw;
+
+}
+.form-control{
+                width: 100%;
+                border-width: 1px;
+				height: 3.5vw;
+                border-color: grey;
+                border-style: solid;
+				padding : 0vw;
+            }
+            
+.form-control:hover
+			{
+                border-color: blue;
+            }
+.form-icon{
+                width: 1.5vw;
+                height: 1.5vw;
+                align-content: center;
+				margin-top: 1vw;
+				margin-right : 0.5vw;
+            }
+			#ip{
+			border-width:0px;
+						}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 30px ;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  font-size:1vw;
+}
+
+.text-box{
+                border : 1px;
+                width: 90%;
+                font-size: 1vw;
+            }
+
+<!--			
+.text-box:focus{
+                outline: none;
+            }
+-->
+
+input[type=checkbox]
+{
+	width : 1.2vw;
+	height : 1.2vw;
+	border-color : grey;
+}
+
+/* Extra style for the cancel button (red) */
+
+.fa-facebook {
+  background: gray;
+  color: white;
+}
+.fa-twitter {
+  background: gray;
+  color: white;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+.div1
+{
+width: 300px;
+height: 100px;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px; 
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    
+}
+</style>
+
+<script type="text/javascript">
+            function myFunction()
+            {
+                var text = document.getElementById("ip").value;
+                var image = document.getElementById("status");
+                if(text !== "")
+                {
+                    image.src="./tick1.png";
+                }
+                else
+                {
+                    image.src="./tick2.svg";
+                }
+            }
+            
+			  function myFunction1()
+            {
+                var text = document.getElementById("ip1").value;
+                var image = document.getElementById("status1");
+                if(text !== "")
+                {
+                    image.src="./tick1.png";
+                }
+                else
+                {
+                    image.src="./tick2.svg";
+                }
+            }
+            
+        </script>
+
+
+<body>
+
+<div class="w3-container w3-white">
+    <div class="w3-card-4 w3-display-middle w3-white" style="width:30%;height:84%;" >
+  	<form class="modal-content animate" action="inner-page.html" method="POST">
+		<div class="imgcontainer">
+		  <img src="pic.png" alt="Avatar" class="avatar">
+		</div>
+		<div class="w3-container w3-center">
+		  <h1 style="font-size:2vw;color:grey;" ><b>Admin Login</b></h1> 
+		  <p style="font-size:1vw;color:grey">Sign in to your account</p>
+		</div>
+
+		<div class="w3-container">
+			<div class="form-control" > 
+				<input type="text" class="text-box" style="width : 90%; height : 2.5vw; font-size : 1.5vw; color : grey;"  placeholder="yourname@email.com" id="ip" onclick="myFunction()" onfocus="myFunction()" onkeypress="myFunction()" onmouseout="myFunction()"  name="uname" required />
+				<img class="form-icon" id="status" src="" alt="" style="float:right;"/>
+			</div>
+			<br>
+			<div class="form-control" > 
+				<input type="password" placeholder="password" class="text-box" style="width : 90%; height : 2.5vw; font-size : 1.5vw; color : grey;" id="ip1"onclick="myFunction1()" onfocus="myFunction1()" onkeypress="myFunction1()" onmouseout="myFunction1()"  name="psw" required />
+				<img class="form-icon" id="status1" src="" alt="" style="float:right;"/>
+			</div>
+		</div>  
+			
+		<div class="w3-container" style="font-size:1.3vw;color : grey">
+			<input type="checkbox"  name="remember" style="margin-top: 2vw; margin-left: 0vw;"/>
+			<label>Remember me</label>
+			<button type="submit" style="width:40%; float:right; margin-left:2vw; border-radius: 4%;">LOGIN</button>
+		</div>
+		<br>
+		<div class="w3-container " style="background-color:#f1f1f1;bottom:0; left:0; font-size: 1vw;width:100%">      
+			<p class="w3-center" style="font-size:1vw;color:grey">Connect with<a href="#"  class="fa fa-twitter"> </a> <a href="#"  class="fa fa-facebook"></a> </p>
+		</div>
+  </form>
+  </div>
+</div>
+<script type="text/javascript">
+            function myFunction()
+            {
+                var text = document.getElementById("ip").value;
+                var image = document.getElementById("status");
+                if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(text))
+                {
+                    image.src="./green.png";
+                }
+                else
+                {
+                    image.src="./gre.png";
+                }
+            }
+            
+			  function myFunction1()
+            {
+                var text = document.getElementById("ip1").value;
+                var image = document.getElementById("status1");
+                if(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,20}$/ .test(text))
+                {
+                    image.src="./green.png";
+                }
+                else
+                {
+                    image.src="./gre.png";
+                }
+            }
+            
+        </script>
+
+
+</body>
+</html>
